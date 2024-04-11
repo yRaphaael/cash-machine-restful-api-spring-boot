@@ -9,4 +9,6 @@ import java.util.UUID;
 @Repository
 public interface MoneyRepository extends JpaRepository<MoneyModel, UUID> {
 
+    boolean existsByMoneyValue(double moneyValue);
+
 }
