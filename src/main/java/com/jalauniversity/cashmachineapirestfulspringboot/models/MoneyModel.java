@@ -1,6 +1,7 @@
 package com.jalauniversity.cashmachineapirestfulspringboot.models;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -26,6 +27,11 @@ public class MoneyModel implements Serializable {
 
     @Column(name = "MONEY_UPDATED_AT")
     private LocalDateTime moneyUpdatedAt;
+
+
+    public MoneyModel() {
+
+    }
 
     public UUID getIdMoney() {
         return idMoney;
